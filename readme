@@ -1,1 +1,20 @@
-test
+# CuponesPeru
+
+Aplicación en Python para extraer cupones, descuentos y promociones desde cualquier URL utilizando Playwright para navegar y DeepSeek como asistente IA para interpretar el HTML.
+
+## Requisitos
+- Python 3.10+
+- Dependencias del archivo `requirements.txt`
+- Navegadores de Playwright instalados (ejecutar `playwright install` tras instalar los paquetes).
+
+## Uso
+```bash
+python app.py "https://ejemplo.com/promociones"
+```
+La herramienta:
+1. Carga la página y desplaza/expande contenido dinámico (scroll y botones tipo "ver más").
+2. Extrae fragmentos de texto relacionados a cupones.
+3. Consulta a DeepSeek para devolver un JSON con los cupones detectados.
+
+## Configuración de la clave
+Se utiliza la variable de entorno `DEEPSEEK_API_KEY`. Si no está definida, la aplicación usará el valor incluido en el código.
